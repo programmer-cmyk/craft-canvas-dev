@@ -94,7 +94,44 @@ const Landing = () => {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {/* Free Plan */}
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold mb-2">Free</h3>
+                  <div className="text-4xl font-bold mb-4">
+                    $0<span className="text-lg text-gray-300">/month</span>
+                  </div>
+                  <p className="text-gray-300">Get started for free</p>
+                </div>
+                
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center">
+                    <Check className="w-5 h-5 text-green-400 mr-3" />
+                    <span>Up to 10 automated responses</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-5 h-5 text-green-400 mr-3" />
+                    <span>Basic analytics</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-5 h-5 text-green-400 mr-3" />
+                    <span>Community support</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-5 h-5 text-green-400 mr-3" />
+                    <span>1 Instagram account</span>
+                  </li>
+                </ul>
+                
+                <Button 
+                  className="w-full bg-white/10 text-white border border-white/20 hover:bg-white/20"
+                  onClick={() => navigate('/dashboard')}
+                >
+                  Start Free
+                </Button>
+              </div>
+              
               {/* Starter Plan */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <div className="text-center mb-8">
