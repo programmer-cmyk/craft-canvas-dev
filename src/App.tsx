@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { DashboardSidebar } from "@/components/DashboardSidebar";
 import { DashboardHeader } from "@/components/DashboardHeader";
+import Landing from "./pages/Landing";
 import Index from "./pages/Index";
 import Contacts from "./pages/Contacts";
 import Automations from "./pages/Automations";
@@ -37,7 +38,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<DashboardLayout><Index /></DashboardLayout>} />
+          <Route path="/" element={<Landing />} />
+          <Route path="/dashboard" element={<DashboardLayout><Index /></DashboardLayout>} />
           <Route path="/contacts" element={<DashboardLayout><Contacts /></DashboardLayout>} />
           <Route path="/automations" element={<DashboardLayout><Automations /></DashboardLayout>} />
           <Route path="/integrations" element={<DashboardLayout><Integrations /></DashboardLayout>} />
